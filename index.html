@@ -40,6 +40,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
         var cold_count = 0;
 	var allergyPercent = 0;
 	var colPercent = 0;
+	<!--added percentage var here hoping to calculate percentage-->
 
 
         function allergyAdd(){
@@ -155,6 +156,18 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 <div class="page" id="six">
 	<div class="w3-container w3-flat-carrot">
+		<h1>Question 5</h1>
+	</div>
+	
+	<div id="content" class="w3-container">
+		<p>Do you have clear mucous?</p>
+		<a href="#seven"  onclick="allergyAdd();" class="w3-btn w3-blue w3-round-large">Yes</a>
+		<a href="#seven"  onclick="coldAdd();" class="w3-btn w3-blue w3-round-large">No</a>
+	</div>
+</div>	
+	
+<div class="page" id="seven">
+	<div class="w3-container w3-flat-carrot">
 		<h1>Results</h1>
 	</div>
 	
@@ -166,7 +179,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		coldpercent = cold_count / .06;
 		resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "%<br> Probability it is a cold =" + coldPercent +"%";
 		</script> 
-		<!--This needs to be checked-->
+		<!--This needs to be checked; tried connecting to the percentage var-->
 	</div>
 </div>
 	
