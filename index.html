@@ -40,18 +40,22 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
         var cold_count = 0;
 	var allergyPercent = 0;
 	var colPercent = 0;
-	<!--added percentage var here hoping to calculate percentage-->
 
 
         function allergyAdd(){
             allergy_count = allergy_count + 1;
-	<!--got rid of allergy count to get rid of alert pop up on yes-->
 
         }
 
         function coldAdd(){
             cold_count = cold_count + 1;
         }
+	
+	function getResults(){
+		var allergyPercent = 100 * ((allergy_count)/(allergy_count + cold_count)); 
+		var coldPercent = 100 * ((cold_count)/(allergy_count + cold_count)); 
+		resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "%<br> Probability it is a cold =" + coldPercent +"%";
+	}
 
   </script>
 
@@ -114,8 +118,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 	<div id="content" class="w3-container">
 		<p>Do you have a fever?</p>
-		<a href="#three"  onclick="allergyAdd();" class="w3-btn w3-blue w3-round-large">Yes</a>
-		<a href="#three"  onclick="coldAdd();" class="w3-btn w3-blue w3-round-large">No</a>
+		<a href="#three"  onclick="coldAdd();" class="w3-btn w3-blue w3-round-large">Yes</a>
+		<a href="#three"  onclick="allergyAdd();" class="w3-btn w3-blue w3-round-large">No</a>
 	</div>
 </div>	
 	
@@ -126,8 +130,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 	<div id="content" class="w3-container">
 		<p>Do you have a sore throat?</p>
-		<a href="#four"  onclick="allergyAdd();" class="w3-btn w3-blue w3-round-large">Yes</a>
-		<a href="#four"  onclick="coldAdd();" class="w3-btn w3-blue w3-round-large">No</a>
+		<a href="#four"  onclick="coldAdd();" class="w3-btn w3-blue w3-round-large">Yes</a>
+		<a href="#four"  onclick="allergyAdd();" class="w3-btn w3-blue w3-round-large">No</a>
 	</div>
 </div>	
 
@@ -150,8 +154,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 	<div id="content" class="w3-container">
 		<p>Do you have any muscle aches?</p>
-		<a href="#six"  onclick="allergyAdd();" class="w3-btn w3-blue w3-round-large">Yes</a>
-		<a href="#six"  onclick="coldAdd();" class="w3-btn w3-blue w3-round-large">No</a>
+		<a href="#six"  onclick="coldAdd();" class="w3-btn w3-blue w3-round-large">Yes</a>
+		<a href="#six"  onclick="allergyAdd();" class="w3-btn w3-blue w3-round-large">No</a>
 	</div>
 </div>	
 
@@ -169,7 +173,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 <div class="page" id="seven">
 	<div class="w3-container w3-flat-carrot">
-		<h1>Results</h1>
+		<h1>Results!</h1>
 	</div>
 	
 	<div id="content" class="w3-container">
