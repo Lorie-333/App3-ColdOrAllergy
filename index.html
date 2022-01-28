@@ -54,7 +54,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	function getResults(){
 		var allergyPercent = 100 * ((allergy_count)/(allergy_count + cold_count)); 
 		var coldPercent = 100 * ((cold_count)/(allergy_count + cold_count)); 
-		document.innerHTML = "Probability it is allergies =" + allergyPercent + "%" + "<br> Probability it is a cold =" + coldPercent +"%";
+		document.getElementById("results").innerHTML = "Probability it is allergies =" + allergyPercent + "%" + "<br> Probability it is a cold =" + coldPercent +"%";
 	}
 
   </script>
@@ -178,12 +178,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 	<div id="content" class="w3-container">
 		<p id="results"></p>
-		<script> 
-		var resultText = document.getElementById("results");
-		allergypercent = allergy_count / .06;
-		coldpercent = cold_count / .06;
-		resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "%<br> Probability it is a cold =" + coldPercent +"%";
-		</script> 
+		
 		<!--This needs to be checked; tried connecting to the percentage var-->
 	</div>
 </div>
