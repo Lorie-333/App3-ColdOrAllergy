@@ -6,6 +6,8 @@ THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.
  
  
 Authors in chronological order of contribution:
+Lorie Zhang
+Author 1
 Tim Riedel
 Author 2
  
@@ -17,10 +19,10 @@ Timothy Riedel
 triedel@utexas.edu
  
 Brief Description of Goal of Code:
-blah, blah, blah,
+To make a survey app for finding if you have allergies or the cold.
  
 Known Issues:
-blah, blah, blah, blah
+Symptoms of allergies and cold.
 
 https://www.w3schools.com/w3css/default.asp
 https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-file
@@ -40,7 +42,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
         var cold_count = 0;
 	var allergyPercent = 0;
 	var colPercent = 0;
-
+	
 
         function allergyAdd(){
             allergy_count = allergy_count + 1;
@@ -166,21 +168,20 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 	<div id="content" class="w3-container">
 		<p>Do you have clear mucous?</p>
-		<a href="#seven"  onclick="allergyAdd();" class="w3-btn w3-blue w3-round-large">Yes</a>
-		<a href="#seven"  onclick="coldAdd();" class="w3-btn w3-blue w3-round-large">No</a>
+		<a href="#results"  onclick="allergyAdd();" class="w3-btn w3-blue w3-round-large">Yes</a>
+		<a href="#results"  onclick="coldAdd();" class="w3-btn w3-blue w3-round-large">No</a>
 	</div>
 </div>	
 	
-<div class="page" id="seven">
+<div class="page" id="results">
 	<div class="w3-container w3-flat-carrot">
-		<h1>Results!</h1>
+		<h1>Your Results!!</h1>
 	</div>
 	
 	<div id="content" class="w3-container">
 		<p id="results"></p>
 		<a onclick="getResults();" class="w3-btn w3-blue w3-round-large">Calculate Results</a>
-		
-		<!--This needs to be checked; tried connecting to the percentage var-->
+		<!--Fixed: moved funtion & var to script and connected this button to function-->
 	</div>
 </div>
 	
